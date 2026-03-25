@@ -7,7 +7,7 @@ def generate_random_tree(num_nodes):
     if num_nodes <= 0:
         return None
     # Create a random tree using networkx
-    G = nx.random_tree(num_nodes)
+    G = nx.random_labeled_tree(num_nodes)
     return G
 
 # Function to visualize the tree
@@ -18,6 +18,6 @@ def visualize_tree(G):
     plt.show()
 
 if __name__ == '__main__':
-    num_nodes = random.randint(1, 10)  # Random number of nodes
+    num_nodes = random.randint(3, 20)  # Random number of nodes
     tree = generate_random_tree(num_nodes)
     visualize_tree(tree)
